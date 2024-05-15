@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-14T21:16:29.007597" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTests" source="C:\TestAutomation\RobotFramework\SwagLabs\tests\LoginTests.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Credenciais Válidas" line="9">
+<kw name="Abrir Navegador" owner="Resource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-14T21:16:29.471888" level="INFO">Opening browser 'firefox' to base url 'https://www.google.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-14T21:16:29.471888" elapsed="12.749727"/>
+</kw>
+<status status="PASS" start="2024-05-14T21:16:29.470880" elapsed="12.750735"/>
+</kw>
+<kw name="Dado que estou na página de Login" owner="Login">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-14T21:16:42.225625" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-14T21:16:42.224627" elapsed="1.512097"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_LOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-14T21:16:43.737725" elapsed="0.216264"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-14T21:16:43.959098" level="INFO">Page title is 'Swag Labs'.</msg>
+<arg>${LOGIN_TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-05-14T21:16:43.953989" elapsed="0.005109"/>
+</kw>
+<status status="PASS" start="2024-05-14T21:16:42.223616" elapsed="1.736483"/>
+</kw>
+<kw name="E insiro credenciais válidas" owner="Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-14T21:16:43.961755" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<arg>${LOGIN_FIELD_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-14T21:16:43.960757" elapsed="0.602552"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-14T21:16:44.563309" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<arg>${LOGIN_FIELD_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-14T21:16:44.563309" elapsed="0.138571"/>
+</kw>
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2024-05-14T21:16:43.960757" elapsed="0.741123"/>
+</kw>
+<kw name="E clico no botão &quot;Login&quot;" owner="Login">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-14T21:16:44.702933" level="INFO">Clicking button 'login-button'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-14T21:16:44.702933" elapsed="0.577275"/>
+</kw>
+<status status="PASS" start="2024-05-14T21:16:44.702933" elapsed="0.577275"/>
+</kw>
+<kw name="Então sou redirecionado para a página de produtos" owner="Login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IVENTORY_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-14T21:16:45.281730" elapsed="0.050371"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-14T21:16:45.333110" level="INFO">Login realizado com sucesso!</msg>
+<arg>Login realizado com sucesso!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-14T21:16:45.332101" elapsed="0.001009"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-14T21:16:45.505113" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-05-14T21:16:45.333110" elapsed="0.172999"/>
+</kw>
+<status status="PASS" start="2024-05-14T21:16:45.281210" elapsed="0.224899"/>
+</kw>
+<kw name="Fechar Navegador" owner="Resource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-14T21:16:45.507124" elapsed="4.452923"/>
+</kw>
+<status status="PASS" start="2024-05-14T21:16:45.507124" elapsed="4.452923"/>
+</kw>
+<doc>Esse teste verifica se o login está ocorrendo sem nenhuma não conformidade ao se utilizar credenciais Válidas</doc>
+<tag>Login_valido</tag>
+<status status="PASS" start="2024-05-14T21:16:29.469791" elapsed="20.491442"/>
+</test>
+<status status="PASS" start="2024-05-14T21:16:29.009619" elapsed="20.953610"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Login_valido</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LoginTests">LoginTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
