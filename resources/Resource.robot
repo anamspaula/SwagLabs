@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${BROWSER}    firefox
+${BROWSER}    headlessfirefox
 ${URL}        https://www.google.com/
 
 *** Keywords ***
